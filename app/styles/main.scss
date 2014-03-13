@@ -92,7 +92,7 @@ body {
 }
 
 .table-hover > tbody > tr:hover > td, .table-hover > tbody > tr:hover > th {
-    background-color: $grey;
+    background-color: lighten($grey, 10%);
 }
 
 .container select {
@@ -108,5 +108,23 @@ body {
 @media screen and (min-width: 768px) {
     .container {
         max-width: 100%;
+    }
+}
+
+.input-size td input {
+    display: inline-block;
+    width: 100%;
+    padding: 4px;
+}
+.table-striped {
+    tbody {
+        tr, tr:nth-child(odd) {
+            &.done-true {
+                td {
+                    background-color: red;
+                    color: white;
+                }
+            }
+        }
     }
 }
